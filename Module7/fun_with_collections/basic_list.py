@@ -9,6 +9,7 @@ The purpose of this program is to ask for input and output a basic list
 
 def make_list():
     """ calls get_input three times and returns a basic list
+       :return list of inputs
         """
     the_list = []
     for x in range(3):
@@ -20,6 +21,7 @@ def make_list():
 
 def get_input():
     """ asks and checks for numeric input and returns the input cast to a string
+        :return string of user input
             """
     isValid = False
     while not isValid:

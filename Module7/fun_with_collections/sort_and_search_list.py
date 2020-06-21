@@ -1,5 +1,5 @@
 """
-Program: basic_list_exception.py
+Program: sort_and_search.py
 Author: Jacob Sharpe
 Last date modified: 6/21/2020
 
@@ -9,7 +9,7 @@ The purpose of this program is to ask for input and output a basic list
 
 def make_list():
     """ calls get_input three times and returns a basic list
-        :return list of inputs
+       :return list of inputs
         """
     the_list = []
     for x in range(3):
@@ -28,7 +28,7 @@ def make_list():
 
 def get_input():
     """ asks and checks for numeric input and returns the input cast to a string
-         :return string of user input
+        :return string of user input
             """
     isValid = False
     while not isValid:
@@ -40,5 +40,30 @@ def get_input():
     return str(UserInput)
 
 
+def sort_list(list_to_sort):
+    """ sorts a list
+       :param list that will be sorted
+                """
+    list_to_sort.sort()
+
+
+def search_list(lis, value):
+    """ searches a list for a particular variable
+        :param lis to be searched
+            :return true or false if variable is found
+                """
+    exist = False
+    length = len(lis)
+
+    for x in range(length):
+        if lis[x] == value:
+            exist = True
+
+    return exist
+
+
 if __name__ == '__main__':
-    print(make_list())
+    mainList = make_list()
+    sort_list(mainList)
+    print(mainList)
+    print(search_list(mainList, 10))
