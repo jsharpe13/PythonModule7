@@ -1,5 +1,5 @@
 """
-Program: basic_list.py
+Program: basic_list_exception.py
 Author: Jacob Sharpe
 Last date modified: 6/21/2020
 
@@ -12,8 +12,15 @@ def make_list():
         """
     the_list = []
     for x in range(3):
-        methodInput = int(get_input())
-        the_list.append(methodInput)
+        try:
+            methodInput = int(get_input())
+
+            if methodInput < 1 or methodInput > 50:
+                raise ValueError
+            else:
+                the_list.append(methodInput)
+        except ValueError:
+            raise ValueError
 
     return the_list
 
