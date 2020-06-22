@@ -14,12 +14,12 @@ class TestList(unittest.TestCase):
     def test_value_found(self):
         value = 10
         result = sort_and_search_list.search_list(self.initial_list, value)
-        self.assertTrue(result)
+        self.assertTrue(result, 2)
 
     def test_value_not_found(self):
         value = 15
         result = sort_and_search_list.search_list(self.initial_list, value)
-        self.assertFalse(result)
+        self.assertTrue(result, -1)
 
 
 if __name__ == '__main__':

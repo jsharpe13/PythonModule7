@@ -50,16 +50,16 @@ def sort_list(list_to_sort):
 def search_list(lis, value):
     """ searches a list for a particular variable
         :param lis to be searched
-            :return true or false if variable is found
+        :return true or false if variable is found
                 """
     exist = False
     length = len(lis)
 
     for x in range(length):
         if lis[x] == value:
-            exist = True
+            return x
 
-    return exist
+    return -1
 
 
 if __name__ == '__main__':
